@@ -1,0 +1,28 @@
+body{
+background:wheat;
+}
+div.loginHead{
+text-align:center;
+
+}
+div.loginHead h3{
+color:blue;
+background:aqua;
+border: 5px solid black;
+border-radius:15px;
+font-size:50px;
+padding:50px;
+margin: 50px;
+margin-bottom: 200px;
+}
+.loginForm{
+background-color:lightblue;
+border:5px black;
+width:30%;
+margin: auto;
+border-style:double;
+border-radius:15px;
+text-align:center;
+padding: 30px;
+}
+

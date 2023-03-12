@@ -1,0 +1,58 @@
+.cls {
+  background-color: #333; 
+}
+
+.cls{
+  padding: 30px;
+}
+.cls a{
+  text-decoration: none;
+  color: white;
+}
+
+/* Change the color of links on hover */
+.item:hover{
+  background-color: white;
+  border-radius: 30px;
+  padding: 10px;
+  color: black;
+}
+.item a:hover{
+  color:black;
+}
+
+/* Add a color to the active/current link */
+.item {
+  font-size: 30px;
+  padding: 30px;
+  margin-left: 100px;
+  display: inline;
+  color: white;
+}
+.side{
+  float:right;
+	margin-top: 20px;
+	background-color: rgb(222, 245, 255);
+}
+.sidebar{
+	padding: 20px;
+	font-size: 20px;
+	border: 10px solid white;
+	list-style: none;
+}
+.sidebar:hover{
+	border: 1px solid blue;
+  background-color: black;
+  color: white;
+}
+.sidebar a{
+	text-decoration: none;
+	color:blue;
+}
+.section1{
+	margin:  20px;
+  float: right;
+	width: 50%;
+}
+
+
