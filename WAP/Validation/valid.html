@@ -1,0 +1,71 @@
+
+
+<html>
+<head>
+<title>JS Fun</title>
+<style>
+        *{
+                text-align:center;
+                margin:10px;
+        }
+        #btn{
+                background-color:aqua;
+                border-radius:10px;
+        }
+        .form
+        {
+            background-color:yellow;
+            border:solid 2px black;
+                width:30%;
+                height:30%;
+                margin:auto;
+                border-radius:10px;
+        }
+
+        h2
+        {       
+                margin-top:150px;
+        }
+
+</style>
+<script>
+
+function validate(){
+        const user=document.getElementById("Uname").value;
+        const pass=document.getElementById("Pass").value;
+
+        const userpatt=/^[a-zA-Z0-9]{3,16}$/;
+        const passpatt=/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
+        if(!user.match(userpatt))
+        {
+        alert("Invalid Username, It should contain characters in the range of (3-16)");
+        }
+        else  if(!pass.match(passpatt))
+        {
+        alert("Invalid Password, It should contain atleast one uppercase,lowercase and digit and also minimum 8 characters");
+        }
+
+        else
+        {
+                var d=new Date();
+                var time=d.toLocaleTimeString();
+                document.body.innerHTML+=`<div> Hii `+user+`  You are logged in  at `+time+`.</div>`;
+                document.body.style.backgroundColor="grey";
+        }
+}
+</script>
+<body style="background-color:wheat">
+        <h2> User Login</h2>
+        <form class="form">
+        <label>User id</label>
+        <input type="text" id="Uname" style="margin-top:50px;border-radius:10px;" required><br>
+        <label>password</label>
+        <input type="text" id="Pass" style="border-radius:10px;" required><br>
+        <input type="button" id="btn"  value="Login" onclick="validate()"></input>
+        </form>
+</body>
+
+</html>
+
+

@@ -1,0 +1,30 @@
+<html>
+<head>
+<script>
+function fun()
+{
+
+ var a=`[
+{"name":"abc","age":"21"},
+{"name":"xyz","age":"21"}
+]`;
+
+var b=JSON.parse(a);
+var table="<table><tr><th>name</th><th>age</th></tr>";
+b.forEach(function(d)
+{
+ table+="<tr><td>"+d.name+"</td><td>"+d.age+"</td><tr>";
+
+});
+
+table+="</table>";
+ document.getElementById("tab").innerHTML=table;
+}
+
+</script>
+</head>
+<body>
+<input type="submit" onclick="fun()">Click</input>
+<table id="tab"></table>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function fun()
+{
+ var a=new XMLHttpRequest();
+ a.onreadystatechange=function()
+{
+ if(this.readyState==4 && this.status==200)
+{
+ myfun(this);
+}};
+ a.open("GET","xml.xml",true);
+a.send();
+}
+
+function myfun(xml)
+{
+ var xmldoc=xml.responseXML;
+ var i;
+ var table="<tr><th>name</th><th>age</th></tr>";
+ var x=xmldoc.getElementsByTagName("student");
+ for(i=0;i<x.length;i++)
+{
+ table+="<tr><td>"+x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+"</td><td>"+x[i].getElementsByTagName("age")[0].childNodes[0].nodeValue+"</td></tr>";
+}
+ document.getElementById("tab").innerHTML=table;
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="fun()">click</input>
+<table id="tab"></table>
+</body>
+</html>
